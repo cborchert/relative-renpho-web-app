@@ -1,0 +1,39 @@
+.Change {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 8px;
+
+    &__amount {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0;
+        display: flex;
+        align-items: baseline;
+        line-height: 1;
+        
+        &--negative {
+            color: #2ac769;
+        }
+        &--positive {
+            color: #ff4f4f;
+        }
+    }
+    &__symbol {
+        align-self: center;
+        margin-right: 20px;
+    }
+    &__value {
+        font-size: 8rem;
+    }
+    &__since {
+        font-size: 1rem;
+        &--date {
+            font-size: 0.8rem;
+        }
+    }
+}
+

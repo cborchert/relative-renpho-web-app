@@ -1,0 +1,86 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px;
+  gap: 20px;
+
+  &--modal-open {
+    overflow: hidden;
+    opacity: 0.5;
+
+    * {
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+}
+
+.DataReady {
+  font-weight: 700;
+  color: var(--color-info);
+}
+
+.Progress {
+  text-align: center;
+}
+
+.Progress__item {
+  display: inline-block;
+  min-width: 240px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.Actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.Cta {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &--danger {
+    background-color: var(--color-danger)
+  }
+  &--success {
+    background-color: var(--color-success)
+  }
+}
+
+.Dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  border: 0;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: var(--color-modal-bg);
+  
+  &__title {
+    p {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+  &__actions {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+}
