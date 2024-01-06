@@ -123,7 +123,7 @@ export async function connectToBluetoothDevice() {
             optionalServices: [SERVICE_1]
         });
 
-        device.addEventListener('gattserverdisconnected', (e) => {
+        device.addEventListener('gattserverdisconnected', () => {
             console.log('Disconnected');
             // emit event to update UI
             document.dispatchEvent(new CustomEvent(EVENT_DISCONNECTED));
